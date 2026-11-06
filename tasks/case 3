@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABC College of Engineering</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .logo-area {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(15, 23, 42, 0.9)), url('') center/cover;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: var(--secondary-color);
+            color: #0f172a;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d97706;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 0.95rem;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .admissions-box {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .admissions-box ol {
+            text-align: left;
+            display: inline-block;
+            margin: 1rem 0 1.5rem 0;
+            font-size: 0.9rem;
+            color: #475569;
+            padding-left: 1.2rem;
+        }
+
+        .admissions-box li {
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">ABC College of Engineering</div>
+        <div class="tagline">Knowledge | Innovation | Excellence</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Departments</a></li>
+                <li><a href="#">Faculty</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="#">Facilities</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to ABC College</h1>
+        <p>Build Your Future with Quality Education and Innovation</p>
+        <a href="#" class="btn">Explore Admissions</a>
+    </div>
+
+    <div class="container">
+
+        <section>
+            <h2>About Our College</h2>
+            <div class="about-content">
+                <p>ABC College of Engineering is dedicated to providing quality education, developing technical skills, encouraging innovation, and preparing students for successful careers. Our college provides a supportive learning environment with experienced faculty and modern facilities.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Departments</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Computer Science</h3>
+                    <p>Learn programming, software development, and artificial intelligence.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Electrical Engineering</h3>
+                    <p>Study electrical systems, circuits, and power generation.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Mechanical Engineering</h3>
+                    <p>Explore machines, manufacturing, and mechanical design.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Civil Engineering</h3>
+                    <p>Learn about buildings, construction, and infrastructure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Popular Courses</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <h3>B.Tech CSE</h3>
+                    <p>Bachelor of Technology in Computer Science and Engineering</p>
+                </div>
+                <div class="card">
+                    <h3>B.Tech ECE</h3>
+                    <p>Bachelor of Technology in Electronics and Communication Engineering</p>
+                </div>
+                <div class="card">
+                    <h3>B.Tech EEE</h3>
+                    <p>Bachelor of Technology in Electrical and Electronics Engineering</p>
+                </div>
+                <div class="card">
+                    <h3>B.Tech ME</h3>
+                    <p>Bachelor of Technology in Mechanical Engineering</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Our Faculty</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Dr. Ravi Kumar</h3>
+                    <p><strong>Professor</strong><br>Computer Science Department</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Dr. Priya Sharma</h3>
+                    <p><strong>Associate Professor</strong><br>Electronics Department</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Mr. Suresh Reddy</h3>
+                    <p><strong>Assistant Professor</strong><br>Mechanical Department</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Admissions 2026-2027</h2>
+            <div class="admissions-box">
+                <p>Follow these steps to apply for admission to our college:</p>
+                <ol>
+                    <li>Check the eligibility requirements.</li>
+                    <li>Select your preferred course.</li>
+                    <li>Prepare the required academic documents.</li>
+                    <li>Complete the admission application.</li>
+                    <li>Submit the application and follow the admission instructions.</li>
+                </ol>
+                <div>
+                    <a href="#" class="btn">Admission Enquiries</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Campus Facilities</h2>
+            <div class="grid-4">
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Library</h3>
+                    <p>A library with books, journals, and study resources.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Computer Labs</h3>
+                    <p>Computer laboratories for practical learning and research.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Sports</h3>
+                    <p>Sports facilities for physical fitness and recreation.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Transportation</h3>
+                    <p>Transportation facilities for students and staff.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>College Events</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Annual Day</h3>
+                    <p>A celebration of student achievements and college activities.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Technical Fest</h3>
+                    <p>Technical competitions, project displays, and workshops.</p>
+                </div>
+                <div class="card">
+                    <div class="icon"></div>
+                    <h3>Cultural Fest</h3>
+                    <p>Music, dance, arts, and cultural performances.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>College:</strong> ABC College of Engineering</p>
+                <p><strong>Address:</strong> Vijayawada, Andhra Pradesh, India</p>
+                <p><strong>Email:</strong> info@abccollege.example</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Office Hours:</strong> Monday to Saturday, 9:00 AM – 5:00 PM</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ABC College of Engineering. All Rights Reserved.<br>Designed using HTML and CSS only.</p>
+    </footer>
+
+</body>
+</html>
